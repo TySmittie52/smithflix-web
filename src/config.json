@@ -3,34 +3,52 @@
   "multiserver": false,
   "themes": [
     {
+      "name": "Smithflix",
+      "id": "smithflix",
+      "color": "#090C14",
+      "default": true
+    },
+    {
       "name": "Apple TV",
       "id": "appletv",
       "color": "#bcbcbc"
-    }, {
+    },
+    {
       "name": "Blue Radiance",
       "id": "blueradiance",
       "color": "#011432"
-    }, {
+    },
+    {
       "name": "Dark",
       "id": "dark",
-      "color": "#202020",
-      "default": true
-    }, {
+      "color": "#202020"
+    },
+    {
       "name": "Light",
       "id": "light",
       "color": "#303030"
-    }, {
+    },
+    {
       "name": "Purple Haze",
       "id": "purplehaze",
       "color": "#000420"
-    }, {
+    },
+    {
       "name": "WMC",
       "id": "wmc",
       "color": "#0c2450"
     }
   ],
-  "menuLinks": [],
-  "servers": [],
+  "menuLinks": [
+    {
+      "name": "Requests",
+      "icon": "add_circle",
+      "url": "#/requests"
+    }
+  ],
+  "servers": [
+    "https://media.smithflix.us"
+  ],
   "plugins": [
     "playAccessValidation/plugin",
     "experimentalWarnings/plugin",

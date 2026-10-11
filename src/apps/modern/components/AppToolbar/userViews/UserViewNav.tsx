@@ -143,7 +143,7 @@ const UserViewNav = () => {
                             startIcon={<Icon>{navItem.icon || 'link'}</Icon>}
                             component='a'
                             href={navItem.url}
-                            target='_blank'
+                            target={navItem.url.startsWith('#') ? undefined : '_blank'}
                             rel='noopener noreferrer'
                         >
                             {navItem.name}

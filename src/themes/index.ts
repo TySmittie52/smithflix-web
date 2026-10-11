@@ -6,6 +6,7 @@ import blueradiance from './blueradiance';
 import dark from './dark';
 import light from './light';
 import purplehaze from './purplehaze';
+import smithflix from './smithflix';
 import wmc from './wmc';
 
 /** The default theme containing all color scheme variants. */
@@ -15,7 +16,7 @@ const DEFAULT_THEME = createTheme({
         colorSchemeSelector: '[data-theme="%s"]',
         disableCssColorScheme: true
     },
-    defaultColorScheme: 'dark',
+    defaultColorScheme: 'smithflix',
     ...DEFAULT_THEME_OPTIONS,
     colorSchemes: {
         appletv,
@@ -23,6 +24,7 @@ const DEFAULT_THEME = createTheme({
         dark,
         light,
         purplehaze,
+        smithflix,
         wmc
     }
 });

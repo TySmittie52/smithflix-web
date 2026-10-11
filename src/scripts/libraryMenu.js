@@ -444,8 +444,11 @@ function updateLibraryMenu(user) {
             links.forEach(link => {
                 const option = document.createElement('a', 'emby-linkbutton');
                 option.classList.add('navMenuOption', 'lnkMediaFolder');
-                option.rel = 'noopener noreferrer';
-                option.target = '_blank';
+                // Smithflix: in-app links (e.g. #/requests) open in the same tab
+                if (!link.url.startsWith('#')) {
+                    option.rel = 'noopener noreferrer';
+                    option.target = '_blank';
+                }
                 option.href = link.url;
 
                 const icon = document.createElement('span');

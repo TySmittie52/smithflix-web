@@ -68,7 +68,7 @@ const MainDrawerContent = () => {
                                 <ListItemButton
                                     component='a'
                                     href={menuLink.url}
-                                    target='_blank'
+                                    target={menuLink.url.startsWith('#') ? undefined : '_blank'}
                                     rel='noopener noreferrer'
                                 >
                                     <ListItemIcon>

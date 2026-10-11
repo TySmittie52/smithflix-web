@@ -13,6 +13,7 @@ import { loadLiveTV } from './sections/liveTv';
 import { loadNextUp } from './sections/nextUp';
 import { loadRecentlyAdded } from './sections/recentlyAdded';
 import { loadResume } from './sections/resume';
+import { loadSmithflixAiRows, loadSmithflixSuggestions } from './sections/smithflix';
 
 import 'elements/emby-button/paper-icon-button-light';
 import 'elements/emby-itemscontainer/emby-itemscontainer';
@@ -74,10 +75,27 @@ export function loadSections(elem, apiClient, user, userSettings) {
                 elem.innerHTML = html;
                 elem.classList.add('homeSectionsContainer');
 
-                const promises = getAllSectionsToShow(userSettings)
+                const sectionTypes = getAllSectionsToShow(userSettings);
+                const promises = sectionTypes
                     .map((section, index) => (
                         loadSection(elem, apiClient, user, userSettings, userViews, section, index)
                     ));
+
+                // Smithflix: AI rows and "Not on Smithflix yet", right after Continue Watching
+                const anchorIndex = Math.max(0, sectionTypes.indexOf(HomeSectionType.Resume));
+                const anchor = elem.querySelector('.section' + anchorIndex);
+                const aiElem = document.createElement('div');
+                aiElem.className = 'smithflixAiRows';
+                const suggestElem = document.createElement('div');
+                suggestElem.className = 'verticalSection smithflixSuggestions hide';
+                if (anchor) {
+                    anchor.after(aiElem, suggestElem);
+                } else {
+                    elem.append(aiElem, suggestElem);
+                }
+                const sfxOptions = { enableOverflow: enableScrollX() };
+                promises.push(loadSmithflixAiRows(aiElem, apiClient, sfxOptions));
+                promises.push(loadSmithflixSuggestions(suggestElem, apiClient, sfxOptions));
 
                 return Promise.all(promises)
                     // Timeout for polyfilled CustomElements (webOS 1.2)

@@ -1,0 +1,65 @@
+name: Smithflix / Build web app
+
+# Builds the Smithflix web app on every push and publishes it as the "web" release in the
+# public smithflix-releases repo. The Smithflix Hub on the PowerEdge checks that release
+# every hour and installs new versions automatically.
+
+on:
+  push:
+    branches:
+      - smithflix
+  workflow_dispatch:
+
+concurrency:
+  group: smithflix-web
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install
+        run: npm ci --no-audit
+
+      - name: Swap in the Smithflix logo and icons
+        run: |
+          cp smithflix/brand/*.png node_modules/@jellyfin/ux-web/
+          cp smithflix/brand/favicons/* node_modules/@jellyfin/ux-web/favicons/
+
+      - name: Build
+        env:
+          JELLYFIN_VERSION: Smithflix ${{ github.run_number }}
+        run: |
+          set -o pipefail
+          npm run build:production 2>&1 | tee build.log || {
+            grep -E "ERROR|error TS|Module not found|SyntaxError" -A3 build.log | head -40 | while IFS= read -r line; do echo "::error::${line}"; done
+            exit 1
+          }
+
+      - name: Package
+        run: |
+          test -f dist/index.html
+          tar -C dist -czf smithflix-web.tar.gz .
+          ls -la smithflix-web.tar.gz
+
+      - name: Publish to smithflix-releases
+        env:
+          GH_TOKEN: ${{ secrets.RELEASES_TOKEN }}
+          RELEASES_REPO: ${{ github.repository_owner }}/smithflix-releases
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::error::Add the RELEASES_TOKEN secret to this repo (same token as the smithflix repo uses)"
+            exit 1
+          fi
+          gh release delete web -R "$RELEASES_REPO" --yes --cleanup-tag || true
+          gh release create web smithflix-web.tar.gz -R "$RELEASES_REPO" \
+            --title "Smithflix web app" \
+            --notes "Built from ${GITHUB_SHA::7}: $(git log -1 --pretty=%s)" \
+            --latest=false

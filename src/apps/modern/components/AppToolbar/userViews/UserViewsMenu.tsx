@@ -37,7 +37,7 @@ const UserViewsMenu: FC<UserViewsMenuProps> = ({
                             key={navItem.name}
                             component='a'
                             href={navItem.url}
-                            target='_blank'
+                            target={navItem.url.startsWith('#') ? undefined : '_blank'}
                             rel='noopener noreferrer'
                             onClick={onMenuClose}
                         >
