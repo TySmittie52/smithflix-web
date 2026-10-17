@@ -134,12 +134,12 @@ export async function tuneChannel(apiClient: ApiClient, channelKey: string) {
     // If a previous channel is still playing, its saved state is restored after it stops.
     for (const item of items) {
         if (item.Id && !(item.Id in saved)) {
-            const ud = item.UserData || {};
+            const ud = item.UserData;
             saved[item.Id] = {
-                Played: ud.Played,
-                PlaybackPositionTicks: ud.PlaybackPositionTicks,
-                PlayCount: ud.PlayCount,
-                LastPlayedDate: ud.LastPlayedDate
+                Played: ud?.Played,
+                PlaybackPositionTicks: ud?.PlaybackPositionTicks,
+                PlayCount: ud?.PlayCount ?? undefined,
+                LastPlayedDate: ud?.LastPlayedDate
             };
         }
     }
