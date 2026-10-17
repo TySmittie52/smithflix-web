@@ -43,7 +43,7 @@
     {
       "name": "TV Guide",
       "icon": "live_tv",
-      "url": "#/tv"
+      "url": "#/channels"
     },
     {
       "name": "Requests",
