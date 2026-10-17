@@ -41,6 +41,11 @@
   ],
   "menuLinks": [
     {
+      "name": "TV Guide",
+      "icon": "live_tv",
+      "url": "#/tv"
+    },
+    {
       "name": "Requests",
       "icon": "add_circle",
       "url": "#/requests"
