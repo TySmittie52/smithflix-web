@@ -202,7 +202,7 @@ export function loadSmithflixSuggestions(elem: HTMLElement, apiClient: ApiClient
             }
             let html = '<div class="sectionTitleContainer sectionTitleContainer-cards padded-left">';
             html += '<a href="#/requests" class="button-flat button-flat-mini sectionTitleTextButton" style="text-decoration:none">';
-            html += '<h2 class="sectionTitle sectionTitle-cards">Not on Smithflix yet</h2>';
+            html += '<h2 class="sectionTitle sectionTitle-cards">Not on SyncWave TV yet</h2>';
             html += '<span class="material-icons chevron_right" aria-hidden="true"></span></a></div>';
             html += options.enableOverflow ?
                 '<div is="emby-scroller" class="padded-top-focusscale padded-bottom-focusscale" data-centerfocus="true"><div class="itemsContainer scrollSlider focuscontainer-x sfx-items"></div></div>' :

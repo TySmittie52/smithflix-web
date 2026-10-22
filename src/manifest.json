@@ -1,11 +1,11 @@
 {
-    "name": "Smithflix",
-    "description": "Smithflix: movies, shows and live TV",
+    "name": "SyncWave TV",
+    "description": "SyncWave TV: movies, shows and live TV",
     "lang": "en-US",
-    "short_name": "Smithflix",
+    "short_name": "SyncWave TV",
     "start_url": "index.html#/home",
-    "theme_color": "#090C14",
-    "background_color": "#090C14",
+    "theme_color": "#0E0A18",
+    "background_color": "#0E0A18",
     "display": "standalone",
     "icons": [
         {

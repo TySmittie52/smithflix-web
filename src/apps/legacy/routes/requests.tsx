@@ -17,7 +17,7 @@ const REQUEST_LABEL: Record<string, string> = {
     approved: 'Approved · downloading',
     declined: 'Declined',
     failed: 'Failed',
-    completed: 'On Smithflix'
+    completed: 'On SyncWave TV'
 };
 
 const REQUEST_COLOR: Record<string, string> = {
@@ -106,7 +106,7 @@ const Requests: FC = () => {
 
                 <Section
                     title='Request a movie or show'
-                    hint="Search for anything. If it isn't on Smithflix yet, request it and it'll be added."
+                    hint="Search for anything. If it isn't on SyncWave TV yet, request it and it'll be added."
                 >
                     <div className='padded-left padded-right' style={{ maxWidth: '40em' }}>
                         <input
@@ -126,8 +126,8 @@ const Requests: FC = () => {
                 </Section>
 
                 <Section
-                    title='Not on Smithflix yet'
-                    hint={suggestCount === 0 ? 'Your picks appear here after the nightly AI run.' : 'Picked for you each night by the Smithflix AI.'}
+                    title='Not on SyncWave TV yet'
+                    hint={suggestCount === 0 ? 'Your picks appear here after the nightly AI run.' : 'Picked for you each night by the SyncWave TV AI.'}
                 >
                     <div ref={suggestRef} className='itemsContainer padded-left padded-right vertical-wrap' />
                 </Section>

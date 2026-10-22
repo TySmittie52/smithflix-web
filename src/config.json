@@ -3,9 +3,9 @@
   "multiserver": false,
   "themes": [
     {
-      "name": "Smithflix",
+      "name": "SyncWave TV",
       "id": "smithflix",
-      "color": "#090C14",
+      "color": "#0E0A18",
       "default": true
     },
     {
