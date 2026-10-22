@@ -3,30 +3,30 @@
     $dark: true,
 
     // Color palette
-    $background-default: #090C14,
-    $background-paper: #111A2C,
-    $primary-main: #1C8CFF,
-    $primary-dark: #0A63F2,
-    $primary-light: #0FE6FF,
-    $primary-hover: rgba(28, 140, 255, 0.2),
+    $background-default: #0E0A18,
+    $background-paper: #1A1330,
+    $primary-main: #9B5CFF,
+    $primary-dark: #6D28D9,
+    $primary-light: #E59DFF,
+    $primary-hover: rgba(155, 92, 255, 0.2),
     $primary-contrastText: #fff,
-    $secondary-main: #0FE6FF,
-    $text-primary: #E9EEF8,
-    $text-secondary: rgba(233, 238, 248, 0.72),
-    $action-focus: #1C8CFF,
-    $action-hover: rgba(28, 140, 255, 0.18),
+    $secondary-main: #E59DFF,
+    $text-primary: #F1ECFA,
+    $text-secondary: rgba(241, 236, 250, 0.72),
+    $action-focus: #9B5CFF,
+    $action-hover: rgba(155, 92, 255, 0.18),
     $divider: rgba(255, 255, 255, 0.10),
 
     // Components
-    $appBar-defaultBg: rgba(9, 12, 20, 0.72),
-    $appBar-transparentBg: rgba(9, 12, 20, 0.35),
-    $surface-overlay: rgba(17, 26, 44, 0.72),
+    $appBar-defaultBg: rgba(14, 10, 24, 0.72),
+    $appBar-transparentBg: rgba(14, 10, 24, 0.35),
+    $surface-overlay: rgba(26, 19, 48, 0.72),
     $card-borderRadius: 0.6em,
     $filledInput-bg: rgba(255, 255, 255, 0.07),
     $button-inheritContainedBg: rgba(255, 255, 255, 0.08),
-    $button-inheritContainedHoverBg: rgba(28, 140, 255, 0.28),
-    $snackbarContent-bg: #111A2C,
-    $snackbarContent-color: #E9EEF8
+    $button-inheritContainedHoverBg: rgba(155, 92, 255, 0.28),
+    $snackbarContent-bg: #1A1330,
+    $snackbarContent-color: #F1ECFA
 );
 
 /* ---------- Smithflix glass ---------- */
@@ -34,13 +34,13 @@
 /* Page background: soft blue glow on navy */
 .backgroundContainer,
 body {
-    background-color: #090C14;
+    background-color: #0E0A18;
 }
 
 .backgroundContainer:not(.withBackdrop) {
     background-image:
-        radial-gradient(1200px 600px at 85% -10%, rgba(28, 140, 255, 0.18), transparent 60%),
-        radial-gradient(900px 500px at -10% 110%, rgba(15, 230, 255, 0.08), transparent 60%);
+        radial-gradient(1200px 600px at 85% -10%, rgba(155, 92, 255, 0.18), transparent 60%),
+        radial-gradient(900px 500px at -10% 110%, rgba(229, 157, 255, 0.08), transparent 60%);
 }
 
 /* Frosted header bar */
@@ -64,7 +64,7 @@ body {
 
 .dialog,
 .actionSheet {
-    background-color: rgba(13, 20, 36, 0.86);
+    background-color: rgba(22, 16, 36, 0.86);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 14px;
 }
@@ -79,7 +79,7 @@ body {
 .button-submit,
 .btnPlay.raised,
 .emby-button.button-submit {
-    background: linear-gradient(135deg, #1C8CFF, #0A63F2);
+    background: linear-gradient(135deg, #9B5CFF, #6D28D9);
     color: #fff;
 }
 
@@ -89,7 +89,7 @@ body {
 .card.show-focus:not(.show-animation) .cardBox.visualCardBox,
 .card.show-focus:not(.show-animation) .cardBox:not(.visualCardBox) .cardScalable {
     border-color: transparent;
-    box-shadow: 0 0 0 3px #1C8CFF, 0 0 18px rgba(15, 230, 255, 0.45);
+    box-shadow: 0 0 0 3px #9B5CFF, 0 0 18px rgba(229, 157, 255, 0.45);
 }
 
 .cardImageContainer,
@@ -104,15 +104,15 @@ body {
 }
 
 /* Card background placeholders (no artwork) */
-.defaultCardBackground1 { background-color: #0F2A52; }
-.defaultCardBackground2 { background-color: #123E78; }
-.defaultCardBackground3 { background-color: #0A63F2; }
-.defaultCardBackground4 { background-color: #10334D; }
-.defaultCardBackground5 { background-color: #0B4A6E; }
+.defaultCardBackground1 { background-color: #2A1552; }
+.defaultCardBackground2 { background-color: #3A1F78; }
+.defaultCardBackground3 { background-color: #6D28D9; }
+.defaultCardBackground4 { background-color: #2E1A4D; }
+.defaultCardBackground5 { background-color: #4A1F6E; }
 
 /* Detail ribbon on item details pages */
 .detailRibbon {
-    background: linear-gradient(90deg, rgba(10, 99, 242, 0.25), rgba(9, 12, 20, 0.85) 45%, rgba(15, 230, 255, 0.12));
+    background: linear-gradient(90deg, rgba(109, 40, 217, 0.25), rgba(14, 10, 24, 0.85) 45%, rgba(229, 157, 255, 0.12));
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
 
@@ -133,7 +133,7 @@ body {
     font-weight: 700;
     letter-spacing: 0.04em;
     color: #fff;
-    background: rgba(10, 99, 242, 0.88);
+    background: rgba(109, 40, 217, 0.88);
 }
 
 .sfx-badge.requested {

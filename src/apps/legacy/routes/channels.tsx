@@ -28,28 +28,28 @@ const CSS = `
 #smithflixTvPage .sfxtv-info .meta{display:flex;gap:.8em;align-items:center;margin-top:.7em;opacity:.85;font-variant-numeric:tabular-nums}
 #smithflixTvPage .sfxtv-chip{border:1px solid rgba(255,255,255,.25);border-radius:6px;padding:0 .45em;font-size:.85em}
 #smithflixTvPage .sfxtv-bar{height:4px;border-radius:2px;background:rgba(255,255,255,.12);margin-top:.9em;max-width:28em;overflow:hidden}
-#smithflixTvPage .sfxtv-bar>i{display:block;height:100%;background:linear-gradient(90deg,#1C8CFF,#0FE6FF)}
+#smithflixTvPage .sfxtv-bar>i{display:block;height:100%;background:linear-gradient(90deg,#9B5CFF,#E59DFF)}
 #smithflixTvPage .sfxtv-watch{margin-top:1.1em}
 #smithflixTvPage .sfxtv-preview{width:min(400px,38vw);aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#000;border:1px solid rgba(255,255,255,.12);position:relative}
 #smithflixTvPage .sfxtv-preview video,#smithflixTvPage .sfxtv-preview img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 #smithflixTvPage .sfxtv-preview .live{position:absolute;top:.6em;left:.6em;background:#e53935;color:#fff;font-size:.7em;font-weight:700;letter-spacing:.08em;padding:.1em .5em;border-radius:4px}
-#smithflixTvPage .sfxtv-grid{overflow:auto;margin:0 3.3% 2em;border-radius:14px;border:1px solid rgba(255,255,255,.08);background:rgba(13,20,36,.55);max-height:calc(100vh - 21em)}
+#smithflixTvPage .sfxtv-grid{overflow:auto;margin:0 3.3% 2em;border-radius:14px;border:1px solid rgba(255,255,255,.08);background:rgba(22, 16, 36,.55);max-height:calc(100vh - 21em)}
 #smithflixTvPage .sfxtv-inner{position:relative}
-#smithflixTvPage .sfxtv-times{position:sticky;top:0;z-index:3;display:flex;height:34px;background:rgba(9,12,20,.92);backdrop-filter:blur(10px)}
-#smithflixTvPage .sfxtv-times .corner{position:sticky;left:0;z-index:4;flex:none;background:rgba(9,12,20,.98)}
+#smithflixTvPage .sfxtv-times{position:sticky;top:0;z-index:3;display:flex;height:34px;background:rgba(14, 10, 24,.92);backdrop-filter:blur(10px)}
+#smithflixTvPage .sfxtv-times .corner{position:sticky;left:0;z-index:4;flex:none;background:rgba(14, 10, 24,.98)}
 #smithflixTvPage .sfxtv-times .tick{position:absolute;top:0;height:34px;line-height:34px;padding-left:.6em;font-size:.85em;opacity:.75;border-left:1px solid rgba(255,255,255,.08);font-variant-numeric:tabular-nums}
 #smithflixTvPage .sfxtv-row{display:flex;height:${ROW_H}px;border-top:1px solid rgba(255,255,255,.06)}
-#smithflixTvPage .sfxtv-label{position:sticky;left:0;z-index:2;flex:none;display:flex;align-items:center;gap:.6em;padding:0 .7em;background:rgba(9,12,20,.96);border-right:1px solid rgba(255,255,255,.08)}
+#smithflixTvPage .sfxtv-label{position:sticky;left:0;z-index:2;flex:none;display:flex;align-items:center;gap:.6em;padding:0 .7em;background:rgba(14, 10, 24,.96);border-right:1px solid rgba(255,255,255,.08)}
 #smithflixTvPage .sfxtv-label img{height:40px;width:80px;object-fit:contain}
 #smithflixTvPage .sfxtv-label .num{opacity:.6;font-variant-numeric:tabular-nums;width:1.6em;text-align:right}
 #smithflixTvPage .sfxtv-label .name{font-weight:600;font-size:.9em}
 #smithflixTvPage .sfxtv-track{position:relative;flex:none}
 #smithflixTvPage .sfxtv-prog{position:absolute;top:5px;bottom:5px;border-radius:9px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.06);color:inherit;text-align:left;padding:.35em .7em;overflow:hidden;cursor:pointer;font:inherit}
-#smithflixTvPage .sfxtv-prog.on{background:rgba(28,140,255,.16);border-color:rgba(28,140,255,.35)}
-#smithflixTvPage .sfxtv-prog:hover,#smithflixTvPage .sfxtv-prog:focus{outline:none;background:rgba(28,140,255,.32);box-shadow:0 0 0 2px #1C8CFF inset}
+#smithflixTvPage .sfxtv-prog.on{background:rgba(155, 92, 255,.16);border-color:rgba(155, 92, 255,.35)}
+#smithflixTvPage .sfxtv-prog:hover,#smithflixTvPage .sfxtv-prog:focus{outline:none;background:rgba(155, 92, 255,.32);box-shadow:0 0 0 2px #9B5CFF inset}
 #smithflixTvPage .sfxtv-prog .t{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:.92em}
 #smithflixTvPage .sfxtv-prog .s{opacity:.7;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:.8em}
-#smithflixTvPage .sfxtv-now{position:absolute;top:0;bottom:0;width:2px;background:#0FE6FF;box-shadow:0 0 8px #0FE6FF;z-index:1;pointer-events:none}
+#smithflixTvPage .sfxtv-now{position:absolute;top:0;bottom:0;width:2px;background:#E59DFF;box-shadow:0 0 8px #E59DFF;z-index:1;pointer-events:none}
 #smithflixTvPage .sfxtv-msg{padding:2em 3.3%;opacity:.8}
 @media (max-width:700px){#smithflixTvPage .sfxtv-hero{grid-template-columns:1fr}#smithflixTvPage .sfxtv-preview{width:100%}}
 `;

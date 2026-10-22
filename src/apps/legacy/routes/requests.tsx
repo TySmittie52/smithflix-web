@@ -22,7 +22,7 @@ const REQUEST_LABEL: Record<string, string> = {
 
 const REQUEST_COLOR: Record<string, string> = {
     pending: '#FFB547',
-    approved: '#1C8CFF',
+    approved: '#9B5CFF',
     declined: '#FF5C5C',
     failed: '#FF5C5C',
     completed: '#3DDC97'

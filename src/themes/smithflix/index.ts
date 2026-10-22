@@ -1,38 +1,38 @@
 import { buildCustomColorScheme } from 'themes/utils';
 
-/** The "Smithflix" color scheme: deep navy with the Smithflix blue/cyan accents. */
+/** The SyncWave TV color scheme: near-black with SyncWave purple and lavender accents. */
 const theme = buildCustomColorScheme({
     palette: {
         primary: {
-            main: '#1C8CFF',
-            dark: '#0A63F2',
-            light: '#0FE6FF'
+            main: '#9B5CFF',
+            dark: '#6D28D9',
+            light: '#E59DFF'
         },
         secondary: {
-            main: '#0FE6FF'
+            main: '#E59DFF'
         },
         background: {
-            default: '#090C14',
-            paper: '#111A2C'
+            default: '#0E0A18',
+            paper: '#1A1330'
         },
         text: {
-            primary: '#E9EEF8',
-            secondary: 'rgba(233, 238, 248, 0.72)'
+            primary: '#F1ECFA',
+            secondary: 'rgba(241, 236, 250, 0.72)'
         },
         action: {
-            focus: '#1C8CFF',
-            hover: 'rgba(28, 140, 255, 0.18)'
+            focus: '#9B5CFF',
+            hover: 'rgba(155, 92, 255, 0.18)'
         },
         AppBar: {
-            defaultBg: 'rgba(9, 12, 20, 0.72)'
+            defaultBg: 'rgba(14, 10, 24, 0.72)'
         },
         Button: {
             inheritContainedBg: 'rgba(255, 255, 255, 0.08)',
-            inheritContainedHoverBg: 'rgba(28, 140, 255, 0.28)'
+            inheritContainedHoverBg: 'rgba(155, 92, 255, 0.28)'
         },
         SnackbarContent: {
-            bg: '#111A2C',
-            color: '#E9EEF8'
+            bg: '#1A1330',
+            color: '#F1ECFA'
         }
     }
 });

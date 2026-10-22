@@ -147,7 +147,7 @@ export function showRequestDialog(apiClient: ApiClient, t: HubTitle, onDone?: (s
             <div style="display:flex;gap:1.2em;align-items:flex-start;flex-wrap:wrap">
                 ${t.poster ? `<img src="${escapeHtml(t.poster)}" alt="" style="width:9em;border-radius:.6em">` : ''}
                 <div style="flex:1;min-width:14em">
-                    ${t.reason ? `<p style="color:#0FE6FF;margin-top:0">${escapeHtml(t.reason)}</p>` : ''}
+                    ${t.reason ? `<p style="color:#E59DFF;margin-top:0">${escapeHtml(t.reason)}</p>` : ''}
                     <p style="opacity:.85">${escapeHtml(t.overview || 'No description available.')}</p>
                     <button is="emby-button" type="button" class="raised button-submit block btnRequest" ${requested ? 'disabled' : ''}>
                         <span>${requested ? 'Already requested' : (t.type === 'tv' ? 'Request series' : 'Request movie')}</span>
